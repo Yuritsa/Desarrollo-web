@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuritsa Paéz">
+  <meta name="copyright" content="© 2025 Homvie">
+  <title>Homvie</title>
+
+  <!-- Fuentes y iconos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/homvie.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="social-icons">
+      <a href="#"><i class="fa fa-facebook-official"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <a href="#" class="search"><i class="fa fa-search"></i></a>
+  </nav>
+
+  <!-- Header principal con carrusel, si desean agregar más imagenes es aquí-->
+  <header class="hero">
+    <div class="hero-carousel">
+      <div class="slide active">
+        <img src="img/homviehero.png" alt="Imagen 1">
+
+        <!-- AQUÍ ES PARA COLOCAR LO QUE USTEDES QUIEREN QUE VAYA EN CADA IMAGEN-->
+        <div class="hero-content">
+          <h1>H O M V I E</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">Bienvenidos a <span>HOMVIE EXPERIENCE</span></h6>
+          <button onclick="toggleModal('subscribe')">CONTACTO</button>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/homvie1.jpg" alt="Imagen 2">
+        <div class="hero-content">
+          <h1>Experiencias Únicas</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">Eventos a tu medida</h6>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/homvie2.jpg" alt="Imagen 3">
+        <div class="hero-content">
+          <h1>Cine en Casa</h1>
+          <h6 style="background: rgba(0, 0, 0, 0.5);">Vívelo con Homvie</h6>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- Blog posts -->
+    <section class="blog">
+      <article>
+        <h3>CUMPLEAÑOS</h3>
+        <h5>Title description <span>May 2, 2016</span></h5>
+        <img src="/w3images/girl_hat.jpg" alt="Girl Hat">
+        <p>More Hats! Some text about this blog entry...</p>
+        <div class="actions">
+          <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Like</button>
+          <button onclick="toggleComments('demo1')">Replies <span>1</span></button>
+        </div>
+        <div id="demo1" class="comments">
+          <p>George: Great blog post!</p>
+        </div>
+      </article>
+
+      <article>
+        <h3 style="color:red">PEDIDA DE MANO</h3>
+        <h5>Title description <span>April 23, 2016</span></h5>
+        <img src="img/pedida.jpg" alt="pedida de mano" width="250" height="300">
+        <p>Con nosotros </p>
+        <div class="actions">
+          <button onclick="likeFunction(this)"><i class="fa fa-thumbs-up"></i> Like</button>
+          <button onclick="toggleComments('demo2')">Replies <span>2</span></button>
+        </div>
+        <div id="demo2" class="comments">
+          <p>Amber: Love your blog page!</p>
+          <p>Angie: Love hats!</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="card">
+        <img src="/w3images/avatar_girl2.jpg" alt="Jane">
+        <h4>My Name</h4>
+        <p>Just me exploring the universe of unknowns...</p>
+      </div>
+
+      <div class="card">
+        <h4>Subscribe</h4>
+        <input type="email" placeholder="Enter e-mail">
+        <button onclick="toggleModal('subscribe')">Subscribe</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal -->
+  <div id="subscribe" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal('subscribe')">&times;</span>
+      <h2>SUBSCRIBE</h2>
+      <input type="email" placeholder="Enter e-mail">
+      <button onclick="toggleModal('subscribe')">Subscribe</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <button onclick="scrollToTop()"><i class="fa fa-arrow-up"></i> To the top</button>
+    <p style="font-family: 'Open Sans', sans-serif;">Yuritsa Páez</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/homvie.js"></script>
+</body>
+</html>
